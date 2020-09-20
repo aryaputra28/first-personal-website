@@ -26,7 +26,7 @@ SECRET_KEY = '4b#=&r)rr9=4%)_&6=5h)p5#usgj6cc3^zkw)dol_dr%t4g#ot'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://arya-profile.herokuapp.com']
+ALLOWED_HOSTS = ['https://arya-profile.herokuapp.com','127.0.0.1']
 
 
 # Application definition
