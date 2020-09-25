@@ -1,0 +1,129 @@
+.wrapper{
+    width: 610px;
+    margin: 0 auto;
+    
+}
+.Box {
+    background-color: #FFF4E6;
+}
+header{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+
+}
+.logoContainer,.daftarisi{
+    display: flex;
+}   
+
+.logoContainer {
+    flex: 1;
+}
+
+.daftarisi{
+    list-style: none;
+    font-family: Poppins;
+    justify-content: space-around;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 36px;
+    color: #233D46;
+}
+
+nav {
+    flex: 2;
+}
+
+#myName {
+    right: 10px;
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 43px;
+    line-height: 64px;
+    color: #233D46;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.myphoto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 600px;
+
+}
+
+.namaku {
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 78px;
+    color: #233D46;
+}
+
+#motivasi {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 63px;
+    text-align: center;
+    color: #233D46;
+    /* margin-left: 610px;
+    margin-right: 610px; */
+}
+
+.garis {
+    background: #233D46;
+    width: 600px;
+    height: 17px;
+    left: 420px;
+    top: 990px;
+    border-radius: 40px;
+}
+
+.mid {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 28px;
+    color: #233D46;
+}
+
+#hello {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 63px;
+    color: #233D46;
+}
+#atas {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 46px;
+    color: #233D46;
+}
+.identity {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #233D46;
+}
+
+.tab {
+    padding-left: 10px;
+}

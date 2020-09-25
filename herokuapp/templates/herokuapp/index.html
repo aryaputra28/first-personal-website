@@ -1,29 +1,72 @@
 {% load static %}
 <!DOCTYPE html>
-<html style="text-align: center;">
-     <head>
-          <meta charset="utf-8">
-          <h1>ARYAPUTRA ATHALLAH</h1>
-     </head>
-     <body>
-          <img src="{% static 'Arya.jpg' %}" width="300" height="400">
-        <h3>About Me</h3>
-        <p> Name : Aryaputra Athallah</p>
-        <p> NPM : 1906292931</p>
-        <p> Angkatan : 2019</p>
-        <p> Hobby : Playing Guitar</p>
-        <p> Description : Someone who loves music and instrument</p>
-        <h3>Education</h3>
-        <p> University : Faculty of Computer Science, Universitas Indonesia</p>
-        <p> Educational Background : </p>
-        <p>2016 - 2019 SMAN 6 BOGOR</p>
-        <p>2013 - 2016 SMPN 5 BOGOR</p>
-          <p>2007 - 2013 SDN SUKADAMI 3</p>
-        <h3>My Contact</h3>
+<html lang="en" class="Box" > 
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Aryaputra Athallah</title>
+      <link rel="stylesheet" href="{% static 'desain/style.css' %}">
+</head>
+    <body>
+      <div class="wrapper">
+        <header>
+          <div class="logoContainer">
+              <a href="/" id= "myName">AR</a>
+          </div>
+          <nav>
+              <ul class="daftarisi">
+                  <li><a class="daftarisi" href="/">Profile</a></li>
+                  <li><a class="daftarisi" href="Photography">Photography</a></li>
+              </ul>
+          </nav>
+      </header>
+        <img class="myphoto" src="{% static 'Group 5.png' %}" width="600" height="600">
+        <h1 class="namaku">ARYAPUTRA ATHALLAH</h1>
+        <p id="motivasi">"Being a human who is useful for the nation and family"</p>
+            <hr class="garis">
+            <p id="hello">Hello Everyone!</p>
+            <div class="mid">
+                <p> I’m Arya, student of Faculty of Computer in Universitas Indonesia.</p> 
+                <p>I have a dream to become a person who is useful for the nation and my family. I also record my life with my photography and videography skill.</p>
+            </div>
+            <hr class="garis">
+            <div class="identity">
+                <p id="atas">Identity</p>
+                <ul>
+                    <li>NPM : 1906292931</li>
+                    <li>Angkatan : 2019</li>
+                    <li>TTL : Jakarta, 21 Desember 2020</li>
+                </ul>
+                <p id="atas">Education</p>
+                <ul>
+                    <li>SMAN 6 BOGOR (2016 - 2019) </li>
+                    <li>SMPN 5 BOGOR (2013 - 2016) </li>
+                    <li>SDN SUKADAMAI 3 (2007 - 2013) </li>
+                </ul>
+                <p id="atas">Interest In</p>
+                <ul>
+                    <li>Photography</li>
+                    <li>Videography</li>
+                    <li>Programming</li>
+                    <li>Music</li>
+                    <li>Basketball</li>
+                </ul>
+                <p id="atas">Skill</p>
+                <ul>
+                    <li>Adobe Premiere Pro</li>
+                    <li>Adobe Illustrator</li>
+                    <li>Figma</li>
+                    <li>Java Programming Language</li>
+                    <li>Python Programming Language</li>
+                </ul>
+            </div>
+            <hr class="garis">
+            <p id="atas">Look Me Up On...</p>
         <p>
-          <a href="https://www.instagram.com/aryaputra213/"><img src="{% static 'instagram.png' %}" width="2%" style="padding: 5px;"></a>
-          <a href="https://www.linkedin.com/in/aryaputra-athallah-63b5a3199/"><img src="{% static 'linkedin.png' %}" width="2%" style="padding: 5px;"></a>
+          <a href="https://www.instagram.com/aryaputra213/"><img class="icon" src="{% static 'instagram.png' %}" width="5%" style="margin-left: 250px; padding: 5px; text-align: center;" ></a>
+          <a href="https://www.linkedin.com/in/aryaputra-athallah-63b5a3199/"><img class="icon" src="{% static 'linkedin.png' %}" width="5%" style="padding: 5px;text-align: center;"></a>
         </p>
-             
+      </div>
      </body>
 </html>

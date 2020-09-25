@@ -5,5 +5,6 @@ from . import views
 app_name = 'herokuapp'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.page1),
+    path('Photography',views.page2)
 ]
