@@ -1,129 +1,141 @@
-.wrapper{
-    width: 610px;
-    margin: 0 auto;
-    
+
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-.Box {
-    background-color: #FFF4E6;
-}
-header{
+.cover {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+.daftarisi {
     display: flex;
-    width: 90%;
+    width: 50%;
     margin: auto;
     height: 10vh;
     align-items: center;
-
-}
-.logoContainer,.daftarisi{
-    display: flex;
-}   
-
-.logoContainer {
-    flex: 1;
-}
-
-.daftarisi{
     list-style: none;
-    font-family: Poppins;
     justify-content: space-around;
     text-decoration: none;
     font-style: normal;
     font-weight: 450;
     font-size: 24px;
     line-height: 36px;
-    color: #233D46;
+    color: #ffffff;
+    font-family: Proxima Nova;
 }
 
-nav {
-    flex: 2;
-}
-
-#myName {
-    right: 10px;
-    font-family: Poppins;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 43px;
-    line-height: 64px;
-    color: #233D46;
-    opacity: 0.8;
-    text-decoration: none;
-}
-
-.myphoto {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    height: 600px;
-
-}
-
-.namaku {
+.myname {
     text-align: center;
-    font-family: Poppins;
+    position: absolute;
+    font-family: Proxima Nova;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#welcome {
+    font-family: Proxima Nova;
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 250;
+}
+
+/* .wrapper {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+} */
+
+.atas {
+    text-align: center;
+    font-family: Proxima Nova;
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
-    line-height: 78px;
-    color: #233D46;
+    font-size: 46px;
+    line-height: 56px;
+    color: #253A3C;
 }
-
-#motivasi {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 42px;
-    line-height: 63px;
+ .teks{
     text-align: center;
-    color: #233D46;
-    /* margin-left: 610px;
-    margin-right: 610px; */
-}
-
-.garis {
-    background: #233D46;
-    width: 600px;
-    height: 17px;
-    left: 420px;
-    top: 990px;
-    border-radius: 40px;
-}
-
-.mid {
-    font-family: Poppins;
+    font-family: Proxima Nova;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
-    line-height: 28px;
-    color: #233D46;
-}
+    font-size: 28px;
+    line-height: 40px;
+    color: #000000;
+ }
 
-#hello {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 42px;
-    line-height: 63px;
-    color: #233D46;
-}
-#atas {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 31px;
-    line-height: 46px;
-    color: #233D46;
-}
-.identity {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
+.experience {
+    font-family: Proxima Nova;
     font-size: 20px;
-    line-height: 24px;
-    color: #233D46;
+    line-height: 28px;
+    text-align: center;
+    color: #253A3C;
+ }
+
+.penutup {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.tab {
-    padding-left: 10px;
+.penutup h1 {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 56px;
+    color: #C9CBB9;
+    text-align: center;
+}
+
+.cr {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: 250;
+    font-size: 22px;
+    line-height: 33px;
+    color: #C9CBB9;
+    text-align: center;
+}
+
+table, th, td {
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width:710px) {
+    th{
+        display: block;
+        text-align: center;
+    }
+    td {
+        display: none;
+    }
+    .photo {
+        width: 90%;
+    }
+
+    .photokotak {
+        display: block;
+        margin-left: auto;
+    }
+    p {
+        text-align: center;
+    }
 }

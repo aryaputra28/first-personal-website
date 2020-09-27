@@ -6,4 +6,4 @@ def page1(request):
     return render(request, 'herokuapp/index.html')
 
 def page2(request):
-    return render(request,'herokuapp/Photography.html')
+    return render(request,'herokuapp/portofolio.html')
