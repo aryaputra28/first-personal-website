@@ -63,6 +63,7 @@ body,html {
     font-size: 46px;
     line-height: 56px;
     color: #253A3C;
+    margin-top: 100px;
 }
  .teks{
     text-align: center;
@@ -74,13 +75,6 @@ body,html {
     color: #000000;
  }
 
-.experience {
-    font-family: Proxima Nova;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    color: #253A3C;
- }
 
 .penutup {
     position: relative;
@@ -99,6 +93,7 @@ body,html {
     line-height: 56px;
     color: #C9CBB9;
     text-align: center;
+    margin-top: 25px;
 }
 
 .cr {
@@ -113,29 +108,44 @@ body,html {
 
 table, th, td {
     table-layout: fixed;
+    font-family: Proxima Nova;
+    font-size: 30px;
+    line-height: 28px;
     text-align: center;
+    color: #253A3C;
     width: 100%;
+    border-collapse:collapse;
 }
 
 
 
 @media screen and (max-width:710px) {
-    th{
-        display: block;
-        text-align: center;
-    }
     td {
-        display: none;
+        font-size: small;
+    } 
+    .teks {
+        font-size: medium;
     }
-    .photo {
-        width: 90%;
+    .atas {
+        font-size: xx-large;
     }
-
-    .photokotak {
-        display: block;
-        margin-left: auto;
+    .penutup h1 {
+        font-size: xx-large;
     }
-    p {
-        text-align: center;
+    .cr {
+        font-size: larger;
+    }
+    .icon1 {
+        width: 6%;
+    }
+    .icon2 {
+        width: 13%;
+    }
+    #portofolio {
+        margin-top: 50px;
+    }
+    .daftarisi {
+        margin: auto;
+        font-size: medium;
     }
 }
