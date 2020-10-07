@@ -16,17 +16,13 @@ body,html {
 
 .daftarisi {
     display: flex;
-    width: 50%;
+    width: 60%;
     margin: auto;
     height: 10vh;
     align-items: center;
     list-style: none;
     justify-content: space-around;
     text-decoration: none;
-    font-style: normal;
-    font-weight: 450;
-    font-size: 24px;
-    line-height: 36px;
     color: #ffffff;
     font-family: Proxima Nova;
 }
@@ -35,11 +31,11 @@ body,html {
     text-align: center;
     position: absolute;
     font-family: Proxima Nova;
-    font-size: 30px;
+    font-size: 100px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: white
 }
 
 #welcome {
@@ -47,13 +43,9 @@ body,html {
     font-style: normal;
     color: #FFFFFF;
     font-weight: 250;
+    font-size: 40px;
 }
 
-/* .wrapper {
-    width: 800px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-} */
 
 .atas {
     text-align: center;

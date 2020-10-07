@@ -6,5 +6,6 @@ app_name = 'herokuapp'
 
 urlpatterns = [
     path('', views.page1),
-    path('portofolio',views.page2)
+    path('portofolio',views.page2),
+    path('story1',views.page3)
 ]
