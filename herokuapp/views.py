@@ -7,6 +7,3 @@ def page1(request):
 
 def page2(request):
     return render(request,'herokuapp/portofolio.html')
-
-def page3(request):
-    return render(request,'herokuapp/story1.html')
