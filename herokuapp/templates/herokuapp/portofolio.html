@@ -1,29 +1,8 @@
+
+{% include 'herokuapp/header.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en" class="Box" > 
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="{% static 'desain/style1.css' %}">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel = "icon" type = "image/png" href = "{% static 'image/AR.png' %}">
-      <title>Aryaputra Athallah</title>
-</head>
+
 <body>
-    <div class="cover" style="background-image: url(static/835962.jpg);">
-        <nav>
-            <ul class="daftarisi">
-                <li><a style="font-weight: normal;" class="daftarisi" href="/">About</a></li>
-                <li><a style="font-weight: bold;" class="daftarisi" href="portofolio">Portofolio</a></li>
-            </ul>
-        </nav>
-        <div class="myname">
-            <h2>Aryaputra Athallah</h2>
-            <p id="welcome">Welcome to My Portofolio</p>
-        </div>
-    </div>
         <h1 class="atas" style="margin-top: 100px; text-align: center;">Mobile Development UI/UX</h1>
         <p style="text-align: center;">
             <img src="{% static 'image/portofolio/Frame 1 1.png' %}" class="img-fluid" alt="Responsive image">
@@ -44,14 +23,6 @@
         <p style="text-align: center;">
             <img  src="{% static 'image/portofolio/Photograph_200120_0005.png' %}" style="border-radius: 20px; margin-top: 10px;" class="img-fluid" alt="Responsive image">
         </p>
-    <div class="penutup" style="background-image: url(static/Group20.png);">
-        <h1>Contact Me</h1>
-        <p style="text-align: center;"><a href="https://www.instagram.com/aryaputra213/">
-            <img class="icon" src="{% static 'image/about/instagram.png' %}" > 
-            <a href="https://www.linkedin.com/in/aryaputra-athallah-63b5a3199/">
-            <img class="icon" src="{% static 'image/linkedin.png' %}" style= "padding-left: 20px;"></a>
-        </p>
-        <p class="cr">Copyright © 2020 Arya, All right reserved</p>
-    </div>
 </body>
-</html>
+
+{% include 'herokuapp/footer.html' %}
