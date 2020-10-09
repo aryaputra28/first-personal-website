@@ -1,7 +1,7 @@
 
-{% include 'herokuapp/header.html' %}
+{% extends 'herokuapp/base.html' %}
 {% load static %}
-
+{% block head-footer %}
 <body>
         <h1 class="atas" style="margin-top: 100px; text-align: center;">Mobile Development UI/UX</h1>
         <p style="text-align: center;">
@@ -24,5 +24,4 @@
             <img  src="{% static 'image/portofolio/Photograph_200120_0005.png' %}" style="border-radius: 20px; margin-top: 10px;" class="img-fluid" alt="Responsive image">
         </p>
 </body>
-
-{% include 'herokuapp/footer.html' %}
+{% endblock %}
