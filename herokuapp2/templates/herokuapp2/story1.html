@@ -1,5 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
-
+{% block head-footer %}
 <!DOCTYPE html>
 <html lang="en" class="Box" style="text-align: center;"> 
 <head>
@@ -12,14 +13,6 @@
 </head>
 <body >
     <div class="wrapper">
-        <header>
-            <div class="logoContainer">
-                <h1> AR </h1>
-            </div>
-            <nav>
-                <p><a class="daftarisi" href="/">Story3</a></p>
-            </nav>
-        </header>
             <img class="myphoto" src="{% static 'image/Group 8.png' %}">
             <div class="namaku">
                 <h1>ARYAPUTRA ATHALLAH</h1>
@@ -62,16 +55,9 @@
                     <p>Python Programming Language</p>
                 
             </div>
-            <hr class="garis">
-            <p id="atas">Look Me Up On...</p>
-            <p><a href="https://www.instagram.com/aryaputra213/">
-                <img class="icon" src="{% static 'image/about/instagram.png' %}" style="text-align: center; width: 2%; " >
-            </a>
-                <span class="tab">
-                <a href="https://www.linkedin.com/in/aryaputra-athallah-63b5a3199/">
-                    <img class="icon" src="{% static 'image/linkedin.png' %}" style="text-align: center; width: 2%;">
-                </a>
-            </p>
+
     </div>
 </body>
 </html>
+
+{% endblock %}

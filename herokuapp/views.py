@@ -7,3 +7,4 @@ def page1(request):
 
 def page2(request):
     return render(request,'herokuapp/portofolio.html')
+

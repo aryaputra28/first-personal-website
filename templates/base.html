@@ -1,5 +1,5 @@
 {% load static %}
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en" class="Box" > 
 <head>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'desain/style.css' %}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel = "icon" type = "image/png" href = "{% static 'image/AR.png' %}">
+    
     <title>Aryaputra Athallah</title>
 </head>
 <header>
@@ -19,6 +19,8 @@
                 <li><a style="font-size: large;" class="daftarisi" href="/">About</a></li>
                 <li><a style="font-size: large;" class="daftarisi" href="{% url 'herokuapp:portofolio' %}">Portofolio</a></li>
                 <li><a style="font-size: large;" class="daftarisi" href="{% url 'herokuapp2:story1' %}">Story1</a></li>
+                <li><a style="font-size: large;" class="daftarisi" href="{% url 'matakuliah:matakuliah_list' %}">Course</a></li>
+                <link rel = "icon" type = "image/png" href = "{% static 'image/AR.png' %}">
             </ul>
         </nav>
         <div class="myname">
@@ -26,7 +28,45 @@
             <p id="welcome">Welcome to my web</p>
         </div>
     </div>
-</header>
+</header> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aryaputra Athallah</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel = "icon" type = "image/png" href = "{% static 'image/AR.png' %}">\
+  <link rel="stylesheet" href="{% static 'desain/style.css' %}"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #253A3C;">
+  <a class="navbar-brand" href="/">AR</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"href="{% url 'herokuapp:portofolio' %}">Portofolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'herokuapp2:story1' %}">Story1</a></li></a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'matakuliah:matakuliah_list' %}">Course</a></li>
+      </li>
+      
+    </ul>
+  </div>  
+</nav>
 
 {% block head-footer %}
 
