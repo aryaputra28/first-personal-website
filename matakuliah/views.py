@@ -6,7 +6,7 @@ from .forms import MataKuliahForm
 # Create your views here.
 def Utama(request):
     matahkuliahs = MataKuliahSaya.objects.all()
-    return render(request, 'matakuliah/matakuliah_list.html',{'matakuliahs':matahkuliahs})
+    return render(request, 'matakuliah/matakuliah_list.html', {'matakuliahs':matahkuliahs} )
 
 def formMatkul(request):
     form = MataKuliahForm()
@@ -15,6 +15,7 @@ def formMatkul(request):
         if form.is_valid():
             form.save()
             return redirect('/ListMataKuliah')
+
     return render(request, 'matakuliah/matakuliah_forms.html',{'form':form})
 
 def matkulDetail(request,id):
@@ -26,4 +27,18 @@ def deleteMatkul(request,id):
     if request.method == 'POST' :
         item.delete()
         return redirect('/ListMataKuliah')
+
     return render(request, 'matakuliah/matakuliah_delete.html',{'item':item})
+
+def updateMatkul(request,id):
+    matakuliah = MataKuliahSaya.objects.get(id=id)
+    form = MataKuliahForm(instance=matakuliah)
+    if request.method == 'POST':
+        form = MataKuliahForm(request.POST, instance=matakuliah)
+        if form.is_valid():
+            form.save()
+            return redirect('/ListMataKuliah')
+    context = {
+        'form' :form
+    }
+    return render (request,'matakuliah/matakuliah_forms.html' ,context)

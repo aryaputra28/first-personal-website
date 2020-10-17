@@ -8,6 +8,7 @@ class MataKuliahForm(forms.ModelForm):
     jumlahSKS = forms.IntegerField()
     semester = forms.CharField()
     ruangKelas = forms.CharField()
+    deskripsi = forms.CharField()
 
     class Meta:
         model = MataKuliahSaya

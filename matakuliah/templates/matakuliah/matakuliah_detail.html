@@ -24,15 +24,20 @@
             <td>{{ matakuliah.jumlahSKS }}</td>
           </tr>
           <tr>
-            <th scope="row">Description</th>
+            <th scope="row">Semester</th>
             <td>{{ matakuliah.semester }}</td>
           </tr>
           <tr>
-            <th scope="row">Semester</th>
+            <th scope="row">Room</th>
             <td>{{ matakuliah.ruangKelas }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Deskripsi</th>
+            <td>{{ matakuliah.deskripsi }}</td>
           </tr>
         </tbody>
       </table>
+      <a button type="button" class="btn btn-outline-primary" href="{% url 'matakuliah:matakuliah_update' matakuliah.id %}">Update Course</a>
       <a class="btn btn-danger" href="{% url 'matakuliah:matakuliah_delete' matakuliah.id %}">Delete Course</a>
       <a type="button" class="btn btn-light" href="{% url 'matakuliah:matakuliah_list' %}"><b>Back</b></a>
   </div>
