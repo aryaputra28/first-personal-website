@@ -1,86 +1,96 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head-footer %}
+{% load crispy_forms_tags %}
 
 <header> 
     <div class="cover" style="background-image: url(static/huhu.png);">
   </header>
 <body>
-    <div class="d-flex justify-content-center" style="padding-top: 50px; padding-bottom: 50px;">
-        {% for hasil in hasil_list%}
-        <div class="card" style="width: 18rem;">
-            <h1 style="text-align: center;">{{ hasil.0.NamaKegiatan }} </h1>
-            <div class="card-body">
-                    {% for participant in hasil.1 %}
-                    <table>
-                        <tr>
-                            <th>{{participant.name}}</th>
-                            <form action="{% url 'story6:hapus' %}" method="post">
-                                {% csrf_token %}
-                                <input type="hidden" name="id_participant" value={{participant.id}}>
-                            <th><button  class="btn btn-danger btn-circle btn-xl" type="submit">x</button> </th>
-                        </form>
-                    </tr>
-                </table>
-                {% endfor %}
+
+          <div class="container">
+            <p style="text-align: right; margin-top: 20px;">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#tambahKegiatan" >Tambah Kegiatan</button>
+            </p>
+
+              {% for hasil in hasil_list %}
+              
+              <div class="card mt-3 " style="margin-bottom: 20px;">
+                  <div class="card-header bg-info text-white card border-info mb-3">
+                      <h4>{{hasil.0.NamaKegiatan}}</h2>
+                    </div>
+                    <div class="card-body">
+                        <b>Deskripsi</b>
+                        <p>{{hasil.0.Deskripsi}}</p>
+                        <b>Peserta</b>
+                        {% for participant in hasil.1 %}
+                        <p class="card-text">{{participant.name}}</p>
+                        {% endfor %}
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#tambahParticipant{{ hasil.0.id }}" >Daftar</button>
+
+                    </div>
                 </div>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#tambahParticipant{{ hasil.0.id }}" >Daftar</button>
-          </div>
-         
-          
-          <!-- modal -->  
-          <div class="modal fade" id="tambahParticipant{{hasil.0.id}}" tabindex="-1" aria-labelledby="tambahParticipantTitle" aria-hidden="true">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Daftar Ikut Acara {{ hasil.0.NamaKegiatan }} ?</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
+            
+                
+                
+                <!-- modal -->  
+                <div class="modal fade" id="tambahParticipant{{hasil.0.id}}" tabindex="-1" aria-labelledby="tambahParticipantTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Daftar Ikut Acara {{ hasil.0.NamaKegiatan }} ?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="{% url 'story6:daftar' %}" method="post">
+                                <div class="modal-body">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="id_kegiatan" value="{{hasil.0.id}}">
+                                    <label for="name_participant">Nama: </label>
+                                    <input id="name_participant" name="name_participant" type="text" autofocus>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-primary">Daftar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div >
+            
+            <div class="modal fade" id="tambahKegiatan" tabindex="-1" aria-labelledby="tambahKegiatanTitle" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Daftar Ikut Acara {{ hasil.0.NamaKegiatan }} ?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <form action="{% url 'story6:daftar' %}" method="post">
                             <div class="modal-body">
                                 {% csrf_token %}
-                                <input type="hidden" name="id_kegiatan" value="{{hasil.0.id}}">
-                                <label for="name_participant">Nama: </label>
-                                <input id="name_participant" name="name_participant" type="text" autofocus>
+                                <div class="form-group">
+                                    <label for="nama_kegiatan">Nama Kegiatan: </label>
+                                    <input id="nama_kegiatan" name="nama_kegiatan" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deskripsi_kegiatan">Deskripsi Kegiatan: </label>
+                                    <input id="deskripsi_kegiatan" name="deskripsi_kegiatan" type="text" autofocus>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                <button type="submit" class="btn btn-primary">Daftar</button>
+                                <button type="submit" class="btn btn-primary">Tambah</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            {% endfor %}
-        </div >
-        <p style="text-align: center;">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#tambahKegiatan" >Tambah Kegiatan</button>
-        </p>
-        <div class="modal fade" id="tambahKegiatan" tabindex="-1" aria-labelledby="tambahKegiatanTitle" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Daftar Ikut Acara {{ hasil.0.NamaKegiatan }} ?</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                      </div>
-                      <form action="{% url 'story6:daftar' %}" method="post">
-                          <div class="modal-body">
-                              {% csrf_token %}
-                              <label for="nama_kegiatan">Nama Kegiatan: </label>
-                              <input id="nama_kegiatan" name="nama_kegiatan" type="text" autofocus>
-                          </div>
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                              <button type="submit" class="btn btn-primary">Tambah</button>
-                          </div>
-                      </form>
-                  </div>
-              </div>
-          </div>
-    </body > 
-{% endblock %} 
-
+        </body > 
+        {% endblock %} 
+        
+        

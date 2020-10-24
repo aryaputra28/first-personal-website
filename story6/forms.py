@@ -3,6 +3,7 @@ from .models import *
 
 class KegiatanForm(forms.ModelForm):
     NamaKegiatan = forms.CharField()
+    Deskripsi = forms.Textarea()
     class Meta:
         model = KegiatanSaya
         fields = '__all__'

@@ -24,11 +24,12 @@ def daftar(request):
     id_kegiatan = request.POST.get('id_kegiatan', None)
     name_participant = request.POST.get('name_participant',None)
     nama_kegiatan = request.POST.get('nama_kegiatan', None)
+    deskripsi_kegiatan = request.POST.get('deskripsi_kegiatan', None)
 
     if (id_kegiatan and name_participant) :
         Participant.objects.create(name=name_participant, kegiatan=KegiatanSaya.objects.get(id = id_kegiatan))
     else:
-        KegiatanSaya.objects.create(NamaKegiatan=nama_kegiatan)
+        KegiatanSaya.objects.create(NamaKegiatan=nama_kegiatan, Deskripsi=deskripsi_kegiatan)
 
     return redirect('/ListKegiatan')
 
