@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('herokuapp.urls')),    
     path('',include('herokuapp2.urls')),
     path('',include('matakuliah.urls')),
+    path('',include('story6.urls')),
 ]

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'herokuapp2',
     'matakuliah',
     'crispy_forms',
+    'story6'
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [

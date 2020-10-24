@@ -1,0 +1,143 @@
+
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.cover {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+.daftarisi {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+    list-style: none;
+    justify-content: space-around;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Proxima Nova;
+}
+
+.myname {
+    text-align: center;
+    position: absolute;
+    font-family: Proxima Nova;
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white
+}
+
+#welcome {
+    font-family: Proxima Nova;
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 250;
+    font-size: 40px;
+}
+
+
+.atas {
+    text-align: center;
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 56px;
+    color: #253A3C;
+    margin-top: 100px;
+}
+ .teks{
+    text-align: center;
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 40px;
+    color: #000000;
+ }
+
+
+.penutup {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.penutup h1 {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 56px;
+    color: #C9CBB9;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.cr {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: 250;
+    font-size: 22px;
+    line-height: 33px;
+    color: #C9CBB9;
+    text-align: center;
+}
+
+table, th, td {
+    table-layout: fixed;
+    font-family: Proxima Nova;
+    font-size: 30px;
+    line-height: 28px;
+    text-align: center;
+    color: #253A3C;
+    width: 100%;
+    border-collapse:collapse;
+}
+
+
+
+@media screen and (max-width:710px) {
+    td {
+        font-size: small;
+    } 
+    .teks {
+        font-size: medium;
+    }
+    .atas {
+        font-size: xx-large;
+    }
+    .penutup h1 {
+        font-size: xx-large;
+    }
+    .cr {
+        font-size: larger;
+    }
+    .icon1 {
+        width: 6%;
+    }
+    .icon2 {
+        width: 13%;
+    }
+    #portofolio {
+        margin-top: 50px;
+    }
+    .daftarisi {
+        margin: auto;
+        font-size: medium;
+    }
+}
