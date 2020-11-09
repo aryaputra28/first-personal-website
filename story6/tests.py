@@ -24,9 +24,9 @@ class DetailPageUnitTest(TestCase) :
         self.assertEqual(count, 1)
 
     def test_story6_membuat_model_participant (self):
-        kegiatan = KegiatanSaya.objects.create(NamaKegiatan="Nama Kegiatan")
+        kegiatan = KegiatanSaya.objects.create(NamaKegiatan="Woi", Deskripsi="Mantap Jiwa")
         participant = Participant.objects.create(name="arya",kegiatan=kegiatan)
-        self.assertEquals(str(participant),"Nama Kegiatan dan arya")
+        self.assertEquals(str(participant),"Mantap Jiwa dan arya")
 
     def test_story6_penggunaan_template(self):
         kegiatan = KegiatanSaya.objects.create(NamaKegiatan="Nama Kegiatan")
@@ -37,7 +37,8 @@ class DetailPageUnitTest(TestCase) :
     
     def test_story6_menyimpan_post_kegiatanbaeru(self):
         response = Client().post('/daftar/', data={
-            "nama_kegiatan" : "event_test"
+            "nama_kegiatan" : "event_test",
+            "deskripsi_kegiatan" : "bingung"
         })
         count = KegiatanSaya.objects.all().count()
         self.assertEqual(count,1)
@@ -60,7 +61,6 @@ class DetailPageUnitTest(TestCase) :
             "id_kegiatan" : "1",
             "name_participant" : "Arya"
         })
-
         count = Participant.objects.all().count()
         self.assertEqual(count,1)
         self.assertEqual(response.status_code,302)
@@ -68,6 +68,5 @@ class DetailPageUnitTest(TestCase) :
         response = Client().post('/hapus/',data= {
             "id_participant" : 1,
         })
-
         count = Participant.objects.all().count()
         self.assertEqual(count,0)

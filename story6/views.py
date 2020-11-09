@@ -37,5 +37,4 @@ def hapus(request):
     id_participant = request.POST.get('id_participant', None)
     participant = Participant.objects.get(id = id_participant)
     participant.delete()
-    # return render(request, 'story6/ListKegiatan.html')
     return redirect('/ListKegiatan')
