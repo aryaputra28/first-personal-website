@@ -9,71 +9,70 @@
         </div>
     </div>
 </header>
-<body>
-    <div class="wrapper" >
-        <img id="myphoto" src="{% static 'image/Group 8.png' %}" style="display: block; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;"> 
-        <h1 class="atas">About Me</h1>
-        <p class="teks">I’m a Computer Science student in Universitas Indonesia, I have an interest in web development and mobile development. So this is my first website :)</p>
-        <p class="teks">Photography and videography are also part of my life, so if you want to have some project with me, click my social media below hehehe</p>
-        <h1 class="atas">Experience</h1>
-        <div class="table-responsive">
-
-            <table class="table table-borderless">
-                <tr >
-                    <th><img src="{% static 'image/about/Group 11.png' %}" class="img-fluid" alt="Responsive image"></th>
-                    <th><img src=" {% static 'image/about/Group 9.png' %}" class="img-fluid" alt="Responsive image" ></th>
-                    <th><img src="{% static 'image/about/Group 10.png' %}" class="img-fluid" alt="Responsive image"></th>
-                </tr>
-                <tr>
-                    <td style="font-weight: normal;">Project Officer of Senior High School’s Expo Campus</td>
-                    <td style="font-weight: normal;">Staff of Documentary at New Student Orientation 2020</td>
-                    <td style="font-weight: normal;" >Staff of startup Academy COMPFEST 2020</td>
-                </tr>
-            </table>
-            <h1 class="atas">Education</h1>
-            <table class="table table-borderless" >
-                <tr>
-                    <th><img src="{% static 'image/about/SMPN5Bogor_waifu2x_art_noise3_scale_tta_1 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                    <th><img src="{% static 'image/about/6a82c-logo 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                    <th><img src="{% static 'image/about/makara-ui-fasilkom 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                </tr>
-                <tr>
-                    <td style="font-weight: Bold;">2013 - 2016</td>
-                    <td style="font-weight: Bold;"> 2016 - 2019</td>
-                    <td style="font-weight: Bold;">2019 - NOW</td>
-                </tr>
-                <tr>
-                    <td style="font-weight: normal;">SMP NEGERI 5 BOGOR</td>
-                    <td style="font-weight: normal;">SMA NEGERI 6 BOGOR</td>
-                    <td style="font-weight: normal;" >UNIVERSITAS INDONESIA</td>
-                </tr>
-            </table>
-            <h1 class="atas">Skills</h1>
-            <table class="table table-borderless">
-                <tr>
-                    <th><img src="{% static 'image/about/premiere-cc 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                    <th><img src="{% static 'image/about/adobe-Illustrator-logo-3.png' %} " class="img-fluid" alt="Responsive image"></th>
-                    <th><img src="{% static 'image/about/icon-figma 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                </tr>
-                <tr>
-                    <td style="font-size:x-large;font-weight: Bold;">9/10</td>
-                    <td style="font-size:x-large;font-weight: Bold;">6/10</td>
-                    <td style="font-size:x-large;font-weight: Bold;">6/10</td>
-                </tr>
-                <tr>
-                    <th><img src="{% static 'image/about/269-2691398_python-logo-clipart-transparent-background-png-download.png' %}" class="img-fluid" alt="Responsive image"></th>
-                    <th><img src="{% static 'image/AE.png' %}" class="img-fluid" alt="Responsive image"></th>
-                    <th><img src="{% static 'image/about/a309e05f7767a1d905292e33a0a111aa 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                </tr>
-                <tr>
-                    <td style="font-size:x-large;font-weight: Bold;">8/10</td>
-                    <td style="font-size:x-large;font-weight: Bold;">5/10</td>
-                    <td style="font-size:x-large;font-weight: Bold;">7/10</td>
-                </tr>
-            </table>
+<body >
+    <div class="container" style="margin-bottom: 50px;">
+        <div class="container-fluid">
+            <img id="myphoto" src="{% static 'image/Group 8.png' %}" style="display: block; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;"> 
+            <h1 class="atas">About Me</h1>
+            <p class="teks">I’m a Computer Science student in Universitas Indonesia, I have an interest in web development and mobile development. So this is my first website :)</p>
+            <p class="teks">Photography and videography are also part of my life, so if you want to have some project with me, click my social media below hehehe</p>
+            <h1 class="atas">Experience</h1>
+            
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-4" >
+                        <img src="{% static 'image/about/Group 11.png' %}" >
+                        <h3 style="font-size:20px; margin-top: 30px;">Project Officer of Senior High School’s Expo Campus</h3>
+                    </div>
+                    <div class="col-sm-4" >
+                        <img src=" {% static 'image/about/Group 9.png' %}"  >
+                        <h3 style="font-size: 20px; margin-top: 20px;">Staff of Documentary at New Student Orientation 2020</h3>
+                    </div>
+                    <div class="col-sm-4" >
+                        <img src="{% static 'image/about/Group 10.png' %}" >
+                        <h3 style="font-size: 20px;" >Staff of startup Academy COMPFEST 2020</h3>
+                    </div>
+                </div>
+            
+                <h1 class="atas">Education</h1>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-4" >
+                        <img src="{% static 'image/about/SMPN5Bogor_waifu2x_art_noise3_scale_tta_1 1.png' %}" class="img-fluid" alt="Responsive image"></th>
+                        <h3 style="font-size:20px">SMPN 5 BOGOR</h3>
+                    </div>
+                    <div class="col-sm-4" >
+                        <img src="{% static 'image/about/6a82c-logo 1.png' %}" class="img-fluid" alt="Responsive image"></th>
+                        <h3 style="font-size: 20px;">SMAN 6 BOGOR</h3>
+                    </div>
+                    <div class="col-sm-4" >
+                        <img src="{% static 'image/about/makara-ui-fasilkom 1.png' %}" class="img-fluid" alt="Responsive image"></th>
+                        <h3 style="font-size: 20px; margin-top: 20px;" >UNIVERSITAS INDONESIA</td>
+                    </div>
+                </div>
+            <!-- <h1 class="atas">Skills</h1>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-4" >
+                    <img src="{% static 'image/about/premiere-cc 1.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-sm-4" >
+                    <img src="{% static 'image/about/adobe-Illustrator-logo-3.png' %} " class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-sm-4" >
+                    <img src="{% static 'image/about/icon-figma 1.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-sm-4" >
+                    <img src="{% static 'image/about/269-2691398_python-logo-clipart-transparent-background-png-download.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-sm-4" >
+                    <img src="{% static 'image/AE.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col-sm-4" >
+                    <img src="{% static 'image/about/a309e05f7767a1d905292e33a0a111aa 1.png' %}" class="img-fluid" alt="Responsive image">
+                </div>
+            </div> -->
         </div>
     </div>
-    
 </body>
 
 {% endblock %}

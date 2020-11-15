@@ -5,31 +5,25 @@
 <header>
     <div class="cover" style="background-image: url(static/835962.png);">
         <div class="myname">
-            <h2>Aryaputra Athallah</h2>
-            <p id="welcome">Welcome to my portofolio</p>
+            <p id="welcome" style="font-style: italic;">My Portofolios</p>
         </div>
     </div>
 </header>
 <body>
-        <h1 class="atas" style="margin-top: 100px; text-align: center;">Mobile Development UI/UX</h1>
-        <p style="text-align: center;">
-            <img src="{% static 'image/portofolio/Frame 1 1.png' %}" class="img-fluid" alt="Responsive image">
-            <img id="portofolio" src="{% static 'image/portofolio/Frame 2 1.png' %}" class="img-fluid" alt="Responsive image">
-        </p>
-        <h1 class="atas" style="text-align: center;">Photography</h1>
-            <p style="text-align: center; display: block">
+    <div class="container">
+        <div class="container-fluid">
+            <h1 class="atas" style="margin-top: 50px; text-align: center;">Mobile Development UI/UX</h1>
+            <div style="text-align: center;">
+                <img src="{% static 'image/portofolio/Frame 1 1.png' %}" class="img-fluid" alt="Responsive image">
+                <img id="portofolio" style="margin-top: 20px;" src="{% static 'image/portofolio/Frame 2 1.png' %}" class="img-fluid" alt="Responsive image">
+            </div>
+            <h1 class="atas" style="text-align: center;">Photography</h1>
+            <div style="text-align: center;">
                 <img src="{% static 'image/portofolio/Photograph_200120_0004.png' %}" class="img-fluid" alt="Responsive image" style="border-radius: 20px">
-                <img  src="{% static 'image/portofolio/Photograph_200120_0006_0.png' %}" class="img-fluid" alt="Responsive image"style=" margin-left: 50px; border-radius: 20px;">
-            </p>
-        <p  style="text-align: center;">
-            <img src="{% static 'image/portofolio/Photograph_200120_0007.png' %}" style="border-radius: 20px; margin-top: 10px; margin-bottom: 10px;"class="img-fluid" alt="Responsive image" >
-        </p>
-        <p style="text-align: center;">
-            <img  src="{% static 'image/portofolio/Photograph_200120_0003.png' %}"style="border-radius: 20px;" class="img-fluid" alt="Responsive image">
-            <img  id="portofolio" src="{% static 'image/portofolio/Photograph_200120_0001.png' %}" style="margin-left: 40px; border-radius: 20px;" class="img-fluid" alt="Responsive image">
-        </p>
-        <p style="text-align: center;">
-            <img  src="{% static 'image/portofolio/Photograph_200120_0005.png' %}" style="border-radius: 20px; margin-top: 10px;" class="img-fluid" alt="Responsive image">
-        </p>
+                <img src="{% static 'image/portofolio/Photograph_200120_0007.png' %}" style="border-radius: 20px; margin-top: 10px; margin-bottom: 10px;"class="img-fluid" alt="Responsive image" >
+                <img  src="{% static 'image/portofolio/Photograph_200120_0005.png' %}" style="border-radius: 20px; margin-top: 10px; margin-bottom: 40px;" class="img-fluid" alt="Responsive image">
+            </div> 
+        </div>
+    </div>
 </body>
 {% endblock %}

@@ -40,35 +40,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel = "icon" type = "image/png" href = "{% static 'image/AR.png' %}">
-  <link rel="stylesheet" href="{% static 'desain/style.css' %}"/>
+  <link rel="stylesheet" href="{% static 'desain/styles.css' %}"/>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #253A3C;">
-  <a class="navbar-brand" href="/">AR</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"href="{% url 'herokuapp:portofolio' %}">Portofolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'herokuapp2:story1' %}">Story1</a></li></a>
-      </li>    
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'matakuliah:matakuliah_list' %}">Course</a></li>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'story6:kegiatan_list' %}">Activity</a></li>
-      </li>
-      
-    </ul>
-  </div>  
+<div class="navigasi">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #253A3C;">
+    <a class="navbar-brand" href="/" style="font-style: italic;">AR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"href="{% url 'herokuapp:portofolio' %}">Portofolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'herokuapp2:story1' %}">Story1</a></li></a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'matakuliah:matakuliah_list' %}">Course</a></li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'story6:kegiatan_list' %}">Activity</a></li>
+        </li>
+        
+      </ul>
+    </div>  
+</div>
 </nav>
 
 {% block head-footer %}
