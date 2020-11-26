@@ -5,9 +5,7 @@ class KegiatanSaya(models.Model):
     NamaKegiatan = models.CharField(max_length=500)
     Deskripsi = models.TextField(max_length=500)
     def __str__(self):
-        return self.NamaKegiatan
-    def __str__(self):
-        return self.Deskripsi   
+        return self.NamaKegiatan + self.Deskripsi   
 
 class Participant(models.Model):
     name = models.CharField(max_length = 200)

@@ -1,78 +1,186 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head-footer %}
-<header>
-    <div class="cover" style="background-image: url(static/Group19.png);">
-        <div class="myname">
-            <h2>Aryaputra Athallah</h2>
-            <p id="welcome">Welcome to my web</p>
+
+<header style="margin-bottom: 50px;">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="img"><img class="d-block img-fluid" src="{% static 'home3.png' %}" alt="First slide"></div>
+          </div>
+          <div class="carousel-caption myname" >
+              <h1>Aryaputra Athallah</h1>
+              <h3>Welcome To My Website</h3>
+          </div>
+          <div class="carousel-item">
+            <div class="img"><img class="d-block img-fluid" src="{% static 'home1.png' %}" alt="Second slide"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="img"><img class="d-block img-fluid" src="{% static 'home2.png' %}" alt="Third slide"></div>
+          </div>
         </div>
-    </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 </header>
 <body >
     <div class="container" style="margin-bottom: 50px;">
         <div class="container-fluid">
-            <img id="myphoto" src="{% static 'image/Group 8.png' %}" style="display: block; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;"> 
-            <h1 class="atas">About Me</h1>
-            <p class="teks">I’m a Computer Science student in Universitas Indonesia, I have an interest in web development and mobile development. So this is my first website :)</p>
-            <p class="teks">Photography and videography are also part of my life, so if you want to have some project with me, click my social media below hehehe</p>
-            <h1 class="atas">Experience</h1>
+            <section id="aboutme" style="margin-top: 10px;">
+                <div class="card">
+                    <div class="accordion-title" style="background-color: #3E4D5E; color: white;">
+                        <h5 class="pl-4 py-2 title col-9 mb-0">About Me</h5>
+                    </div>
+                    <div class="accordion-buttons d-flex" style="background-color: #3E4D5E; font-size: 20px;">
+                        <div class="accordion-button-up" style="margin-right: 20px; margin-left: 20px;">
+                            <i class="fa fa-arrow-up" style="color: white;"></i>
+                        </div>
+                        <div class="accordion-button-down">
+                            <i class="fa fa-arrow-down" style="color: white;"></i>
+                        </div>
+                    </div>
+                    <div class = "accordion-content">
+                        <div class="card-body">
+                            <img id="myphoto" src="{% static 'image/Group 8.png' %}" style="display: block; margin-left: auto; margin-right: auto; margin-top: 100px; margin-bottom: 100px;"> 
+                            <p class="teks">I’m a Computer Science student in Universitas Indonesia, I have an interest in web development and mobile development. So this is my first website :)</p>
+                            <p class="teks">Photography and videography are also part of my life, so if you want to have some project with me, click my social media below hehehe</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
-                <div class="row" style="margin-top: 20px;">
-                    <div class="col-sm-4" >
-                        <img src="{% static 'image/about/Group 11.png' %}" >
-                        <h3 style="font-size:20px; margin-top: 30px;">Project Officer of Senior High School’s Expo Campus</h3>
-                    </div>
-                    <div class="col-sm-4" >
-                        <img src=" {% static 'image/about/Group 9.png' %}"  >
-                        <h3 style="font-size: 20px; margin-top: 20px;">Staff of Documentary at New Student Orientation 2020</h3>
-                    </div>
-                    <div class="col-sm-4" >
-                        <img src="{% static 'image/about/Group 10.png' %}" >
-                        <h3 style="font-size: 20px;" >Staff of startup Academy COMPFEST 2020</h3>
-                    </div>
-                </div>
+
             
-                <h1 class="atas">Education</h1>
-                <div class="row" style="margin-top: 20px;">
-                    <div class="col-sm-4" >
-                        <img src="{% static 'image/about/SMPN5Bogor_waifu2x_art_noise3_scale_tta_1 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                        <h3 style="font-size:20px">SMPN 5 BOGOR</h3>
+            <section id="Kegiatan" style="margin-top: 10px;">
+                <div class="card">
+                        <div class="accordion-title" style="background-color: #3E4D5E; color: white;">
+                            <h5 class="pl-4 py-2 title col-9 mb-0">Activities</h5>
+                        </div>
+                        <div class="accordion-buttons d-flex" style="background-color: #3E4D5E; font-size: 20px;">
+                            <div class="accordion-button-up" style="margin-right: 20px; margin-left: 20px;">
+                                <i class="fa fa-arrow-up" style="color: white;"></i>
+                            </div>
+                            <div class="accordion-button-down">
+                                <i class="fa fa-arrow-down" style="color: white;"></i>
+                            </div>
+                        </div>
+                    <div class = "accordion-content">
+                        <div class="card-body">
+                            <ul style="font-size:20px;">
+                                <li>Valorant</li>
+                                <li>Music</li>
+                                <li>Film</li>
+                                <li>Study</li>
+                                <li>Demote</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-sm-4" >
-                        <img src="{% static 'image/about/6a82c-logo 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                        <h3 style="font-size: 20px;">SMAN 6 BOGOR</h3>
+                </div> 
+            </section>
+
+            <section id="Pengalaman" style="margin-top: 10px;">
+                <div class="card">
+                    <div class="accordion-title" style="background-color: #3E4D5E; color: white;">
+                        <h5 class="pl-4 py-2 title col-9 mb-0">Experience</h5>
                     </div>
-                    <div class="col-sm-4" >
-                        <img src="{% static 'image/about/makara-ui-fasilkom 1.png' %}" class="img-fluid" alt="Responsive image"></th>
-                        <h3 style="font-size: 20px; margin-top: 20px;" >UNIVERSITAS INDONESIA</td>
+                    <div class="accordion-buttons d-flex" style="background-color: #3E4D5E; font-size: 20px;">
+                        <div class="accordion-button-up" style="margin-right: 20px; margin-left: 20px;">
+                            <i class="fa fa-arrow-up" style="color: white;"></i>
+                        </div>
+                        <div class="accordion-button-down">
+                            <i class="fa fa-arrow-down" style="color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="card-body">
+                            <div class="row" >
+                                <div class="col-sm-4" >
+                                    <img src="{% static 'image/about/Group 11.png' %}" class="img-fluid" alt="Responsive image">
+                                    <h3 style="font-size:20px; margin-top: 30px;">Project Officer of Senior High School’s Expo Campus</h3>
+                                </div>
+                                <div class="col-sm-4" >
+                                    <img src=" {% static 'image/about/Group 9.png' %}" class="img-fluid" alt="Responsive image" >
+                                    <h3 style="font-size: 20px; margin-top: 20px;">Staff of Documentary at New Student Orientation 2020</h3>
+                                </div>
+                                <div class="col-sm-4" >
+                                    <img src="{% static 'image/about/Group 10.png' %}" class="img-fluid" alt="Responsive image">
+                                    <h3 style="font-size: 20px;" >Staff of startup Academy COMPFEST 2020</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            <!-- <h1 class="atas">Skills</h1>
-            <div class="row" style="margin-top: 20px;">
-                <div class="col-sm-4" >
-                    <img src="{% static 'image/about/premiere-cc 1.png' %}" class="img-fluid" alt="Responsive image">
+            </section>
+
+    
+            <section id="Pendidikan" style="margin-top: 10px;">
+                <div class="card">
+                    <div class="accordion-title" style="background-color: #3E4D5E; color: white;">
+                        <h5 class="pl-4 py-2 title col-9 mb-0">Education</h5>
+                    </div>
+                    <div class="accordion-buttons d-flex" style="background-color: #3E4D5E; font-size: 20px;">
+                        <div class="accordion-button-up" style="margin-right: 20px; margin-left: 20px;">
+                            <i class="fa fa-arrow-up" style="color: white;"></i>
+                        </div>
+                        <div class="accordion-button-down">
+                            <i class="fa fa-arrow-down" style="color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="card-body">
+                            <div class="row" >
+                                <div class="col-sm-4" >
+                                    <img src="{% static 'image/about/SMPN5Bogor_waifu2x_art_noise3_scale_tta_1 1.png' %}" class="img-fluid" alt="Responsive image"></th>
+                                    <h3 style="font-size:20px">SMPN 5 BOGOR</h3>
+                                </div>
+                                <div class="col-sm-4" >
+                                    <img src="{% static 'image/about/6a82c-logo 1.png' %}" class="img-fluid" alt="Responsive image" ></th>
+                                    <h3 style="font-size: 20px;">SMAN 6 BOGOR</h3>
+                                </div>
+                                <div class="col-sm-4" >
+                                    <img src="{% static 'image/about/makara-ui-fasilkom 1.png' %}" class="img-fluid" alt="Responsive image"></th>
+                                    <h3 style="font-size: 20px; margin-top: 20px;" >UNIVERSITAS INDONESIA</td>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-4" >
-                    <img src="{% static 'image/about/adobe-Illustrator-logo-3.png' %} " class="img-fluid" alt="Responsive image">
+            </section>
+
+            <section id="prestasi" style="margin-top: 10px;">
+                <div class="card">
+                    <div class="accordion-title " style="background-color: #3E4D5E; color: white;">
+                        <h5 class="pl-4 py-2 title col-9 mb-0">Achievement</h5>
+                    </div>
+                    <div class="accordion-buttons d-flex" style="background-color: #3E4D5E; font-size: 20px;">
+                        <div class="accordion-button-up" style="margin-right: 20px; margin-left: 20px;">
+                            <i class="fa fa-arrow-up" style="color: white;"></i>
+                        </div>
+                        <div class="accordion-button-down">
+                            <i class="fa fa-arrow-down" style="color: white;"></i>
+                        </div>
+                    </div>
+                    <div class = "accordion-content">
+                        <div class="card-body">
+                            <ul style="font-size: 20px;">
+                                <li>Gatau</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-4" >
-                    <img src="{% static 'image/about/icon-figma 1.png' %}" class="img-fluid" alt="Responsive image">
-                </div>
-            </div>
-            <div class="row" style="margin-top: 20px;">
-                <div class="col-sm-4" >
-                    <img src="{% static 'image/about/269-2691398_python-logo-clipart-transparent-background-png-download.png' %}" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="col-sm-4" >
-                    <img src="{% static 'image/AE.png' %}" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="col-sm-4" >
-                    <img src="{% static 'image/about/a309e05f7767a1d905292e33a0a111aa 1.png' %}" class="img-fluid" alt="Responsive image">
-                </div>
-            </div> -->
+            </section>
         </div>
     </div>
+    <script type="text/javascript" src="{% static 'desain/js/homepage.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 {% endblock %}

@@ -24,9 +24,9 @@ class DetailPageUnitTest(TestCase) :
         self.assertEqual(count, 1)
 
     def test_story6_membuat_model_participant (self):
-        kegiatan = KegiatanSaya.objects.create(NamaKegiatan="Woi", Deskripsi="Mantap Jiwa")
+        kegiatan = KegiatanSaya.objects.create(NamaKegiatan="Mantap Jiwa", Deskripsi="x")
         participant = Participant.objects.create(name="arya",kegiatan=kegiatan)
-        self.assertEquals(str(participant),"Mantap Jiwa dan arya")
+        self.assertEquals(str(participant),"Mantap Jiwax dan arya")
 
     def test_story6_penggunaan_template(self):
         kegiatan = KegiatanSaya.objects.create(NamaKegiatan="Nama Kegiatan")
