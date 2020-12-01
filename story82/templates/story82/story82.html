@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head-footer %}
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<header> 
+    <div class="cover" style="background-image: url(static/Group23.png);">
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="container-fluid">
+            <h1 id="atas" style="text-align: center; margin-top: 20px;">Book Finder</h1>
+            <div style="text-align: center;">
+                <input type="text" id="searchArea" name="fname" placeholder="Nama Buku"><br ><br>
+            </div>
+            <!-- <button type="button" class="btn btn-primary" id="searchButton">Search</button> -->
+            <section id="list_books">
+            </section>
+        </div>
+    </div>
+</body>
+<script>
+    var buku_url = "{% url 'story82:getBooks' %}?fname=";
+</script>
+<script type="text/javascript" src="{% static 'desain/js/bookfinder2.js' %}"></script>
+
+
+{% endblock %}

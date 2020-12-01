@@ -4,7 +4,7 @@ from django.urls import resolve
 from django.http import HttpRequest, response
 
 from .views import *
-# Create your tests here.
+
 class test_path(TestCase):
     def test_path(self):
         response = Client().get('/',{},True)

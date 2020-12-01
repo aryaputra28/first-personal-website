@@ -10,7 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel = "icon" type = "image/png" href = "{% static 'image/AR.png' %}">
-  <link rel="stylesheet" href="{% static 'desain/css/styles.css' %}"/>
+  <link rel="stylesheet" href="{% static 'desain/css/style.css' %}"/>
+  <script type="text/javascript" src="{% static 'desain/js/jquery.js' %}"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 </head>
@@ -37,6 +38,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'story6:kegiatan_list' %}">Activity</a></li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'story8:daftar_buku' %}">Story 8</a></li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'story82:daftar_buku2' %}">Story 8(2)</a></li>
         </li>
         
       </ul>
