@@ -24,4 +24,5 @@ urlpatterns = [
     path('',include('story6.urls')),
     path('',include('story8.urls')),
     path('',include('story82.urls')),
+    path('',include('story9.urls')),
 ]

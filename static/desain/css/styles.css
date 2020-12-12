@@ -11,8 +11,9 @@ body,html {
     font-family: Poppins;
     font-weight: bold;
 }
-.nav-item {
+.nav-link {
     font-weight: 100;
+    color: red;
 }
 .cover {
     position: relative;
@@ -50,7 +51,7 @@ body,html {
     font-size: 40px;
 }
 
-input[type=text] {
+#searchArea[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

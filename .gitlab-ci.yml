@@ -21,7 +21,7 @@ UnitTest:
     - python manage.py runserver 8000 &
   when: on_success
   script:
-    - coverage run --source='story82' manage.py test
+    - coverage run --source='story9' manage.py test
     - coverage report -m
 
 

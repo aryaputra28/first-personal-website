@@ -27,7 +27,7 @@ SECRET_KEY = '4b#=&r)rr9=4%)_&6=5h)p5#usgj6cc3^zkw)dol_dr%t4g#ot'
 DEBUG = True
 
 ALLOWED_HOSTS = ['arya-profile.herokuapp.com','127.0.0.1']
-
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # Application definition
 
@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'story6',
     'story8',
     'story82',
+    'story9',
 ]
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',

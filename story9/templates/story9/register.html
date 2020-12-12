@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block head-footer %}
+<h1>MASUK GASI</h1>
+<body>
+    <div class="container">
+        <form method="POST" action="" style="margin-top: 40px;">
+            {% csrf_token %}
+            {{ form|crispy }}         
+            <button style="margin-top: 10px; margin-bottom: 10px;" type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <div class="d-flex flex-row bd-highlight mb-3">
+            <h5 style="margin-right: 5px;">Already Have An Account? </h5>
+            <h5 style="margin-bottom: 30px;"><a href="{% url 'story9:login' %}" >Login</a></h5>
+        </div>
+    </div>
+</body>
+{% endblock %}

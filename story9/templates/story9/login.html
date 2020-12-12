@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head-footer %}
+<style>
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+</style>
+
+<body  >
+    
+    <div class="container">
+        <h1 style="margin-bottom: 100px;">tst</h1>
+        <form method="POST" action="" >
+            {% csrf_token %}
+            <label style="margin-top: 400x;">Username</label>
+            <input type="text" name="username" placeholder="Your username...">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="password...">
+            <button style="margin-top: 10px; margin-bottom: 10px;" type="submit" class="btn btn-primary">Login</button>
+            {% if messages %}
+            {% for i in messages %}
+            <div class="alert alert-danger" role="alert" >
+                {{i}}
+            </div>
+            {% endfor %}
+            {% endif %}
+        </form>
+        <div  class="d-flex flex-row bd-highlight mb-3">
+            <h5 style="margin-right: 5px;">Don't Have An Account? </h5>
+            <h5 style="margin-bottom: 250px;"><a  href="{% url 'story9:register' %}" >Sign Up</a></h5>
+        </div>
+    </div>
+</body>
+{% endblock %}
