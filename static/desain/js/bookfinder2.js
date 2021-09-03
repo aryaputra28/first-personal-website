@@ -18,6 +18,7 @@ cariBuku = (search_value) => {
         type:"GET",
         url: buku_url + search_value,
         dataType: "json",
+        timeout: 500,
         success: function(data) {
             $('#list_books').empty();
             for (item of data.items) {

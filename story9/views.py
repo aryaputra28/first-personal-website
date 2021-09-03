@@ -16,7 +16,6 @@ def loginAkun(request):
         else:
             print("MASUK ELSE")
             messages.error(request,"wrong username or password")
-
     return render(request,'story9/login.html')
 
 
